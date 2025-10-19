@@ -95,7 +95,7 @@ const Favorites = ({renderFunc = "none", showCards}: IFavorites) => {
             </FavoriteNames>
             <FavoriteCard hide={hide}>
                 {evolutions.length === 0 && selectEvolution === "true" ? <p>Adicione uma Evolução!</p> : ""}
-                {pokemons.length === 0 && selectPokemon === "true" ? <p>Adicione uma Evolução!</p> : ""}
+                {pokemons.length === 0 && selectPokemon === "true" ? <p>Adicione um Pokémon!</p> : ""}
                 {evolutions.map((evolution) => (
                     <CardFavEvolution
                         pokeId={evolution.id}
