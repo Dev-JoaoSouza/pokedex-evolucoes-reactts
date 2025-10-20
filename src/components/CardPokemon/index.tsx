@@ -28,9 +28,9 @@ const CardPokemon = ({pokeId, pokeName, pokeImg, pokeType, pokeDetail, save, fun
     
             pokemonArray.push(pokemon);
             localStorage.setItem("pokemon", JSON.stringify(pokemonArray));
+            
+            save = true;
         }
-
-        save = true;
     }
 
     const handleDetails = () => func(pokeId);

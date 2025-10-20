@@ -24,18 +24,14 @@ const CardEvolution = ({pokeId, pokeName, pokeImg, types, save}: ICardEvolution)
             }
     
             let evolutions = localStorage.getItem("evolution");
+            let evolutionsArray = [];
     
-            if (!evolutions) {
-                const evolutionsArray = [];
-                evolutionsArray.push(pokemon);
-    
-                localStorage.setItem("evolution", JSON.stringify(evolutions));
-            } else {
-                const evolutionsArray = JSON.parse(evolutions);
-                evolutionsArray.push(pokemon);
-    
-                localStorage.setItem("evolution", JSON.stringify(evolutionsArray));
+            if (evolutions) {
+                evolutionsArray = JSON.parse(evolutions);
             }
+    
+            evolutionsArray.push(pokemon);
+            localStorage.setItem("evolution", JSON.stringify(evolutionsArray));
 
             save = true;
         }
